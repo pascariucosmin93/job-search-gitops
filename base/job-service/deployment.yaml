@@ -66,6 +66,8 @@ spec:
                   key: POSTGRES_PASSWORD
             - name: JOBS_FILTER_EXCLUDE_US
               value: "true"
+            - name: JOBS_ADZUNA_ENABLED
+              value: "false"
             - name: JOBS_ADZUNA_COUNTRY
               value: "gb"
             - name: JOBS_ADZUNA_APP_ID
