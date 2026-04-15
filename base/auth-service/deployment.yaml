@@ -38,7 +38,7 @@ spec:
                 "CREATE DATABASE auth"
       containers:
         - name: auth-service
-          image: ghcr.io/pascariucosmin93/auth-service:0.0.1
+          image: ghcr.io/pascariucosmin93/auth-service:0.0.2
           ports:
             - containerPort: 8080
               name: http

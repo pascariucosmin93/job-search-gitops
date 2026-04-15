@@ -38,7 +38,7 @@ spec:
                 "CREATE DATABASE jobs"
       containers:
         - name: job-service
-          image: ghcr.io/pascariucosmin93/job-service:0.0.1
+          image: ghcr.io/pascariucosmin93/job-service:0.0.2
           ports:
             - containerPort: 8080
               name: http
