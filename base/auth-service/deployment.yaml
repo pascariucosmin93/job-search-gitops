@@ -20,7 +20,7 @@ spec:
     spec:
       initContainers:
         - name: create-database
-          image: ghcr.io/pascariucosmin93/auth-service:47eab0013e75aeae4fb40247b344ca9757cbcaba
+          image: alpine:3.20
           env:
             - name: PGPASSWORD
               valueFrom:
@@ -31,6 +31,7 @@ spec:
             - sh
             - -c
             - |
+              apk add --no-cache postgresql-client && \
               psql -h postgres.postgress.svc.cluster.local -U devops -d postgres -tc \
                 "SELECT 1 FROM pg_database WHERE datname = 'auth'" | grep -q 1 || \
               psql -h postgres.postgress.svc.cluster.local -U devops -d postgres -c \
