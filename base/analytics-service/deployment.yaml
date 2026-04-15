@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: analytics-service
-          image: ghcr.io/YOUR_GITHUB_USERNAME/analytics-service:latest
+          image: ghcr.io/pascariucosmin93/analytics-service:latest
           ports:
             - containerPort: 8080
               name: http

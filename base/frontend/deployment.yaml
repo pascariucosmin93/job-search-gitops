@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: ghcr.io/YOUR_GITHUB_USERNAME/frontend:latest
+          image: ghcr.io/pascariucosmin93/frontend:latest
           ports:
             - containerPort: 3000
               name: http

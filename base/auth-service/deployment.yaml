@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: auth-service
-          image: ghcr.io/YOUR_GITHUB_USERNAME/auth-service:latest
+          image: ghcr.io/pascariucosmin93/auth-service:latest
           ports:
             - containerPort: 8080
               name: http

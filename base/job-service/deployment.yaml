@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: job-service
-          image: ghcr.io/YOUR_GITHUB_USERNAME/job-service:latest
+          image: ghcr.io/pascariucosmin93/job-service:latest
           ports:
             - containerPort: 8080
               name: http
