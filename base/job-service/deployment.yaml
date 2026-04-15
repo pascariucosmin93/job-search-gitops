@@ -8,7 +8,7 @@ metadata:
     app.kubernetes.io/name: job-service
     app.kubernetes.io/component: backend
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: job-service
