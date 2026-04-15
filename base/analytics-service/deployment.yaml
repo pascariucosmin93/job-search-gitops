@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: analytics-service
-          image: ghcr.io/pascariucosmin93/analytics-service:0.0.7
+          image: ghcr.io/pascariucosmin93/analytics-service:0.0.8
           ports:
             - containerPort: 8080
               name: http
