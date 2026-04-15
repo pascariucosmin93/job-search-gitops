@@ -29,6 +29,8 @@ spec:
               value: "production"
             - name: PORT
               value: "3000"
+            - name: JOB_SERVICE_URL
+              value: "http://job-service.jobs-platform.svc.cluster.local"
           resources:
             requests:
               cpu: "100m"
