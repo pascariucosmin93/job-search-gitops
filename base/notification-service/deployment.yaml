@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: notification-service
-          image: ghcr.io/pascariucosmin93/notification-service:0.0.8
+          image: ghcr.io/pascariucosmin93/notification-service:0.0.9
           ports:
             - containerPort: 8080
               name: http
