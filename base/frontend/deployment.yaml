@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: ghcr.io/pascariucosmin93/frontend:latest
+          image: ghcr.io/pascariucosmin93/frontend:3c0308cb8f5d04cb52f09da348a02a91ac5aea1c
           ports:
             - containerPort: 3000
               name: http

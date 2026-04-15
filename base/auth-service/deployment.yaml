@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: auth-service
-          image: ghcr.io/pascariucosmin93/auth-service:latest
+          image: ghcr.io/pascariucosmin93/auth-service:3c0308cb8f5d04cb52f09da348a02a91ac5aea1c
           ports:
             - containerPort: 8080
               name: http
