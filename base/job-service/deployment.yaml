@@ -20,7 +20,7 @@ spec:
     spec:
       initContainers:
         - name: create-database
-          image: postgres:17-alpine
+          image: ghcr.io/pascariucosmin93/job-service:47eab0013e75aeae4fb40247b344ca9757cbcaba
           env:
             - name: PGPASSWORD
               valueFrom:
@@ -37,7 +37,7 @@ spec:
                 "CREATE DATABASE jobs"
       containers:
         - name: job-service
-          image: ghcr.io/pascariucosmin93/job-service:3c0308cb8f5d04cb52f09da348a02a91ac5aea1c
+          image: ghcr.io/pascariucosmin93/job-service:47eab0013e75aeae4fb40247b344ca9757cbcaba
           ports:
             - containerPort: 8080
               name: http
