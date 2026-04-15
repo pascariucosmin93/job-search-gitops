@@ -5,7 +5,6 @@ namespace: jobs-platform
 
 resources:
   - namespace.yaml
-  - postgres-secret.yaml
   - job-service/deployment.yaml
   - job-service/service.yaml
   - auth-service/deployment.yaml
