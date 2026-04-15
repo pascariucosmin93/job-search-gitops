@@ -43,6 +43,13 @@ spec:
             - containerPort: 8080
               name: http
           env:
+            - name: JAVA_TOOL_OPTIONS
+              value: >-
+                -XX:+UseSerialGC
+                -Xms32m
+                -Xmx200m
+                -XX:MaxMetaspaceSize=96m
+                -XX:TieredStopAtLevel=1
             - name: POSTGRES_HOST
               value: "postgres.postgress.svc.cluster.local"
             - name: POSTGRES_DB
@@ -59,11 +66,11 @@ spec:
                   key: POSTGRES_PASSWORD
           resources:
             requests:
-              cpu: "250m"
-              memory: "512Mi"
+              cpu: "100m"
+              memory: "128Mi"
             limits:
               cpu: "500m"
-              memory: "768Mi"
+              memory: "512Mi"
           livenessProbe:
             httpGet:
               path: /actuator/health/liveness
