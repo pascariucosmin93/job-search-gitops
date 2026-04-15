@@ -64,6 +64,26 @@ spec:
                 secretKeyRef:
                   name: postgres-credentials
                   key: POSTGRES_PASSWORD
+            - name: JOBS_FILTER_EXCLUDE_US
+              value: "true"
+            - name: JOBS_ADZUNA_COUNTRY
+              value: "gb"
+            - name: JOBS_ADZUNA_APP_ID
+              valueFrom:
+                secretKeyRef:
+                  name: job-api-credentials
+                  key: JOBS_ADZUNA_APP_ID
+            - name: JOBS_ADZUNA_APP_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: job-api-credentials
+                  key: JOBS_ADZUNA_APP_KEY
+            - name: JOBS_GREENHOUSE_BOARD_TOKENS
+              value: "greenhouse"
+            - name: JOBS_LEVER_ENABLED
+              value: "false"
+            - name: JOBS_ASHBY_ENABLED
+              value: "false"
           resources:
             requests:
               cpu: "100m"
