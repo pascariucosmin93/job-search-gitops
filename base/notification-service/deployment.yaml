@@ -21,6 +21,10 @@ spec:
       containers:
         - name: notification-service
           image: ghcr.io/pascariucosmin93/notification-service:0.0.9
+          securityContext:
+            runAsNonRoot: true
+            runAsUser: 1000
+            allowPrivilegeEscalation: false
           ports:
             - containerPort: 8080
               name: http

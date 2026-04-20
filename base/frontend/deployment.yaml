@@ -21,6 +21,10 @@ spec:
       containers:
         - name: frontend
           image: ghcr.io/pascariucosmin93/frontend:0.0.9
+          securityContext:
+            runAsNonRoot: true
+            runAsUser: 1000
+            allowPrivilegeEscalation: false
           ports:
             - containerPort: 3000
               name: http
