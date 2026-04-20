@@ -81,7 +81,10 @@ spec:
                   name: job-api-credentials
                   key: JOBS_ADZUNA_APP_KEY
             - name: JOBS_GREENHOUSE_BOARD_TOKENS
-              value: "greenhouse"
+              valueFrom:
+                secretKeyRef:
+                  name: job-api-credentials
+                  key: JOBS_GREENHOUSE_BOARD_TOKENS
             - name: JOBS_LEVER_ENABLED
               value: "false"
             - name: JOBS_ASHBY_ENABLED
