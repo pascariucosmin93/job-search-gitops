@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: notification-service
-          image: ghcr.io/pascariucosmin93/notification-service:0.0.9
+          image: ghcr.io/pascariucosmin93/notification-service:0.0.10
           securityContext:
             runAsNonRoot: true
             runAsUser: 1000
