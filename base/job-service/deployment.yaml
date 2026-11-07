@@ -71,6 +71,18 @@ spec:
               value: "false"
             - name: JOBS_ASHBY_ENABLED
               value: "false"
+            - name: JOBS_CAREERJET_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: job-api-credentials
+                  key: JOBS_CAREERJET_API_KEY
+                  optional: true
+            - name: JOBS_CAREERJET_USER_IP
+              valueFrom:
+                secretKeyRef:
+                  name: job-api-credentials
+                  key: JOBS_CAREERJET_USER_IP
+                  optional: true
           resources:
             requests:
               cpu: "100m"
