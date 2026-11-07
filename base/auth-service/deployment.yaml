@@ -18,24 +18,6 @@ spec:
         app: auth-service
         app.kubernetes.io/name: auth-service
     spec:
-      initContainers:
-        - name: create-database
-          image: alpine:3.20
-          env:
-            - name: PGPASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: postgres-credentials
-                  key: POSTGRES_PASSWORD
-          command:
-            - sh
-            - -c
-            - |
-              apk add --no-cache postgresql-client && \
-              psql -h postgres.postgress.svc.cluster.local -U devops -d postgres -tc \
-                "SELECT 1 FROM pg_database WHERE datname = 'auth'" | grep -q 1 || \
-              psql -h postgres.postgress.svc.cluster.local -U devops -d postgres -c \
-                "CREATE DATABASE auth"
       containers:
         - name: auth-service
           image: ghcr.io/pascariucosmin93/auth-service:0.0.10
@@ -51,7 +33,7 @@ spec:
                 -XX:MaxMetaspaceSize=96m
                 -XX:TieredStopAtLevel=1
             - name: POSTGRES_HOST
-              value: "postgres.postgress.svc.cluster.local"
+              value: "postgress.cosmin.home"
             - name: POSTGRES_DB
               value: "auth"
             - name: POSTGRES_USER
