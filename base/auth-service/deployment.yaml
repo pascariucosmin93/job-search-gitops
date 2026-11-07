@@ -46,6 +46,13 @@ spec:
                 secretKeyRef:
                   name: postgres-credentials
                   key: POSTGRES_PASSWORD
+            - name: AUTH_DEFAULT_USERNAME
+              value: "cosmin"
+            - name: AUTH_DEFAULT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: auth-credentials
+                  key: AUTH_DEFAULT_PASSWORD
           resources:
             requests:
               cpu: "100m"
