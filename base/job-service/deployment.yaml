@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: job-service
-          image: ghcr.io/pascariucosmin93/job-service:0.0.14
+          image: ghcr.io/pascariucosmin93/job-service:0.0.15
           ports:
             - containerPort: 8080
               name: http
